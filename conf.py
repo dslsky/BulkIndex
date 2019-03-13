@@ -46,7 +46,7 @@ HARM_INFO_ZIDUAN = {
     "WECHAT_INFO_TABLE":"wx_info",
     "WEIBO_TRANSFER_TABLE":"wb_transfer",
     "MONITOR_INFO_TABLE":"forum_info",
-    "TIEBA_FLOOR_TABLE":"tb_floor",
+    "TB_FLOOR_TABLE":"tb_floor",
     "WEIBO_USER_TABLE":"wb_user",
     "DOUYIN_INFO_TABLE":"dy_info",
     "DOUYIN_COMMENT_TABLE":"dy_comment"
@@ -378,7 +378,7 @@ WEIBO_LIKE_TABLE ={
     "wb_le_nickname":"nick_name",
     "wb_le_parent_mid":"parent_mid",
     "wb_le_image":"logo",
-    "wb_ct_spidertime":"spider_time",
+    "wb_le_spidertime":"spider_time",
     "wb_le_parent_rowkey":"parent_rowkey",
     "wb_le_updatetime":"update_time",
     "wb_le_parent_nickname":"parent_nick_name",
@@ -428,7 +428,9 @@ WEIBO_USER_TABLE ={
     "wb_ur_updatetime":"update_time",
     "wb_ur_harmful_num":"harmful_num",
     "wb_ur_spidertime":"spider_time",
-    "wb_ur_history_nickname":"history_name"
+    "wb_ur_history_nickname":"history_name",
+    "wb_ur_is_remove":"user_valid",
+    "wb_ur_user_active":"user_active",
 }
 #（专题）
 WEIBO_INFO_TABLE ={
@@ -525,6 +527,7 @@ WEIBO_INFO_TABLE ={
     "wb_is_remove":"is_valid",
     "wb_video":"video_url",
     "wb_video_length":"video_length",
+    "wb_user_is_remove":"user_valid",
 }
 #（网信）
 WEIBO_TABLE = {
@@ -817,11 +820,13 @@ DOUYIN_INFO_TABLE = {
     "dy_hot_word_id": "hot_word_id",
     "dy_status": "status",
     "dy_vd_length":"video_length",
-    "dy_vd_is_remove":"is_remove",
+    # "dy_vd_is_remove":"is_remove",
     "dy_vd_update_time":"updatetime",
     "dy_harmful_degree":"harmful_degree",
     "dy_harmful_degree_formula":"harmful_degree_formula",
     "dy_vd_is_local":"web_local",
+    "dy_vd_is_remove":"is_valid",
+    "dy_vd_user_is_remove":"user_valid",
 }
 DOUYIN_USER_TABLE = {
     "dy_ur_user_url":"user_url",
@@ -848,6 +853,8 @@ DOUYIN_USER_TABLE = {
     "dy_ur_harmful_num":"harmful_num",
     "dy_ur_update_time":"updatetime",
     "dy_ur_is_local":"web_local",
+    "dy_ur_is_remove": "user_valid",
+    "dy_ur_user_active": "user_active",
 }
 DOUYIN_COMMENT_TABLE = {
     "dy_ct_mid":"mid",
@@ -991,6 +998,9 @@ COUNT_INFO_TABLE = {
     "count_web_county": "web_county",
     "count_web_is_newswebsite": "is_newswebsite",
     "count_website_name": "website_name",
+    "count_source": "count_source",
+    "web_inner": "web_inner",
+    "web_local": "web_local",
 }
 ziduan = {
     'tb_floor':TB_FLOOR_PARAM,
@@ -1028,7 +1038,7 @@ ziduan = {
 AUDIO_LIST = ["audio_duration","audio_file_size","audio_info_tablename","audio_info_rowkey","audio_spider_time","audio_url","audio_source_fastdfs_url","audio_fastdfs_url","audio_harmful_type_org","audio_harmful_type_org_time","audio_harmful_type_print","audio_harmful_type_print_time","audio_feature_org","audio_org_time","audio_feature_print","audio_print_time","audio_lang","audio_recognition","audio_recognition_time","audio_is_frome_video","audio_source","audio_source_url","audio_video_rowkey","audio_aas_reg_id","audio_publish_time","audio_is_reduplicated"]
 IMAGE_LIST = ["pic_info_tablename","pic_info_rowkey","pic_spider_time","pic_is_in_redis","pic_source_fastdfs_url","pic_image_fastdfs_url","pic_height_width","pic_face_time","pic_face_dfs","pic_harmful_type","pic_harmful_time","pic_category","pic_ocr_lang","pic_ocr_content","pic_ocr_time","pic_is_frame","pic_image_source","pic_source_url","pic_source_transcode_url","pic_publish_time"]
 AUDIOAAS_LIST = ["audio_rowkey","infotablename","inforowkey","pubtime","spidtime","audio_source_url","audio_fastdfs_url","audio_file_size","audio_duration"]
-VIDEO_LIST = ["video_spider_time","video_url","video_fastdfs_url","video_keyframe_time","video_feature_time","video_audio_fastdfs_url","video_audio_time","video_audio_rowkey","video_audio_time","video_fastdfs_url_ts","video_ts_time","video_publish_time","video_info_tablename","video_source","video_info_rowkey","video_source_url","video_frame_rowkey_prefix","video_is_alignment_with_info","video_frame_fastdfs_url_list"]
+VIDEO_LIST = ["video_spider_time","video_url","video_fastdfs_url","video_keyframe_time","video_feature_time","video_audio_fastdfs_url","video_audio_time","video_audio_rowkey","video_audio_time","video_fastdfs_url_ts","video_ts_time","video_publish_time","video_info_tablename","video_source","video_info_rowkey","video_source_url","video_frame_rowkey_prefix","video_is_alignment_with_info","video_frame_fastdfs_url_list","video_duration"]
 list_ziduan = {
     "audio":AUDIO_LIST,
     "image":IMAGE_LIST,
